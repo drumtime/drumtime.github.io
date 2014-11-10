@@ -1,10 +1,10 @@
 <footer>
     <div class='content'>
     <div class='col'>
-        <a class='badrabbit' href='http://onebadrabbit.com'></a>
+        <a class='badrabbit' href='#'></a>
         <h1>Created by badRabbit</h1>
         <ul>
-            <li><a href='http://onebadrabbit.com'>badRabbit</a> © 2012</li>
+            <li><a href='#'>badRabbit</a> © 2012</li>
             <li>Amsterdam, The Netherlands</li>
         </ul>
     </div>
