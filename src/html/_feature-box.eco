@@ -1,0 +1,7 @@
+<div class='box'>
+  <div>
+    <div class='image <%=@className%>'></div>
+    <h3><%=@title%></h3>
+    <p><%- @description %></p>
+  </div>
+</div>

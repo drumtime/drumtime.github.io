@@ -1,0 +1,15 @@
+<div class='dark-inverted'>
+    <section id='configurable'>
+
+        <div class='image help'></div>
+        <div class='text'>
+          <h1>Easy to Use and Configurable</h1>
+          <p>
+              Besides allowing you to configure tracks to match your kit or device, DrumTime's interface lets you focus on practicing. Hit the spacebar to start and stop playing. An optional count-in gives you time to get set.
+          </p>
+          <p>
+            Naturally, you can adjust the tempo, either by typing in the exact BPM or by simply scrolling. Also choose from a wide variety of time signatures - how about broadening your repertoire by tackling 13/8 time? If you get stuck, there is always the built-in help function and tutorial to fall back on.
+          </p>
+        </div>
+    </section>
+</div>

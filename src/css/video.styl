@@ -1,0 +1,210 @@
+#video_overlay 
+  transition(opacity 500ms)
+  height: 100%
+  width: 100%
+  background: rgba(0,0,0,0.5)
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  z-index: -1
+
+  &.visible 
+    transition(opacity 200ms)
+    opacity: 1
+    z-index: 20
+
+    .content 
+      transform(scale(1))
+      
+  .close 
+    color: #bbb
+    font-size: 16px
+    height: 16px
+    width: 16px
+    position: absolute
+    left: 12px
+    top: 10px
+    cursor: pointer
+
+    &:hover 
+      color: #eee
+    
+    &:active 
+      color: #aaa
+      
+  h1 
+    color: #bbb
+  
+  .content 
+    width: 576px
+    height: 400px
+    padding: 10px 20px
+    transition(all 500ms)
+    border-radius(4px)
+    transform(scale(0.1))
+    background: #222
+    top: 40%
+    left: 50%
+    margin-left: -298px
+    margin-top: -200px
+    position: absolute
+    //border: 1px solid rgba(255, 255, 255, 0.2)
+  
+  a.goFullscreen 
+    position: absolute
+    top: 5px
+    right: 10px
+    height: 30px
+    width: 30px
+    pointer-events: auto
+    background: url(images/fullscreen.png) no-repeat 50% 50%
+    background-size: 20px 20px
+
+    &:hover 
+      background: url(images/fullscreen_hover.png) no-repeat 50% 50%
+      background-size: 20px 20px
+    
+    &:active 
+      background: url(images/fullscreen.png) no-repeat 50% 50%
+      background-size: 20px 20px
+      
+  #video 
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    position: relative
+    top: 16px
+    box-shadow(0 1px 1px rgba(255, 255, 255, 0.15) inset, 0 0 4px rgba(0,0,0,0.8))
+    border-radius(2px)
+    overflow: hidden
+    background-clip: padding-box
+
+    .yt-player 
+      position: absolute
+      top: 50%
+      width: 50%
+      margin: -180px 0 0 -320px
+      height: 360px
+      width: 640px
+      left: 50%
+    
+    &.fullscreen 
+      top: 0
+      left: 0
+      background-size: cover
+
+      .yt-player 
+        position: static
+        margin: 0 auto
+      
+    &.playing, &.paused, &.buffering 
+      .yt-player 
+        opacity: 1
+          
+    &:hover 
+      .scrubber 
+        transition(opacity 200ms)
+        opacity: 1
+          
+    .yt-player 
+      opacity: 0
+    
+    .controls 
+      top: 0
+      height: 100%
+      width: 100%
+      position: absolute
+      //pointer-events: none
+
+      .goFullscreen  
+        display: none
+
+    .play 
+      position: absolute
+      left: 50%
+      margin-top: -32px
+      margin-left: -32px
+      top: 50%
+      pointer-events: auto
+    
+    .scrubber 
+      bottom: 10px
+      height: 10px
+      left: 40px
+      right: 40px
+      opacity: 0
+      padding: 0
+      pointer-events: auto
+      position: absolute
+      z-index: 1
+
+      .track 
+        border-radius(5px)
+        box-shadow( 0 2px 8px rgba(0,0,0,0.4) inset, 0 -1px 1px -1px rgba(0,0,0, 1), 0 1px 1px -1px rgba(255,255,255, 1) )
+        transition(opacity 200ms 200ms)
+        background: rgba(255, 255, 255, 0.25)
+        height: 100%
+        width: 100%
+        position: relative
+        padding: 0 5px
+        left: -5px
+
+        &::before 
+          content: ' '
+          border-radius(5px 0 0 5px)
+          width: 5px
+          height: 100%
+          position: absolute
+          left: 0
+          top: 0
+          background: rgba(255, 255, 255, 0.5)
+        
+        .progress 
+          background: rgba(255, 255, 255, 0.5)
+          height: 100%
+          transform(scale(0))
+          transform-origin(0 50%)
+          width: 100%
+              
+      .knob 
+        cursor: -moz-grab
+        cursor: -webkit-grab
+        height: 10px
+        left: 0
+        position: absolute
+        top: -5px
+        left: -10px
+        width: 10px
+        padding: 5px
+
+        &::after 
+          content: ' '
+          border-radius(100%)
+          box-shadow( 0 -1px 1px rgba(0,0,0,0.2) inset, 0 1px 1px rgba(255,255,255,0.5) inset)
+          background: #ddd
+          height: 10px
+          left: 50%
+          margin: -5px 0 0 -5px
+          position: absolute
+          top: 50%
+          width: 10px
+                  
+    &.playing 
+      .play 
+        display: none
+          
+    &.buffering 
+      .play 
+        background-image: none
+
+        &::after 
+          content: 'loading ...'
+          position: absolute
+          top: 50%
+          width: 100%
+          white-space: nowrap
+          text-align: center
+          color: #fff
+          font-size: 18px
+          text-shadow: 0 0 2px #000
+          z-index: 1

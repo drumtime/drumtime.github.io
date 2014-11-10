@@ -1,0 +1,12 @@
+<head>
+    <title><%= @title %></title>
+    <link href="css/main.css" media="screen" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src='js/jquery.js'></script>
+    <script type="text/javascript" src='js/player.js'></script>
+    <script type="text/javascript" src='js/main.js'></script>
+    <meta name="keywords" content="drum,drumming,music,timing,metronome,learning,education,percussion,midi,practice,beat,rhythm,lesson" />
+    <meta name="author" content="badRabbit" />
+    <meta name="Description" content="DrumTime is a Mac App that works with your electronic drum kit or any MIDI enabled percussion device. DrumTime displays and analyzes what you are playing and gives you visual cues about your timing.">
+    <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="PyTxXnTp9N50sxiEtM_1b0e4CmPOF4-TqQ1fQt0o0NU" />
+</head>

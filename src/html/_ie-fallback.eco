@@ -1,0 +1,12 @@
+<div id='logo' class='ie'></div>
+<h1 class='ie'>Unsupported Browser</h1>
+<p class='ie'>
+    This is the website for the Mac App DrumTime and isn't optimized for Internet Explorer.
+    You can view in any of these browsers: Google Chrome, Firefox, Safari. Alternatively, you can
+    install <a href='http://www.google.com/chromeframe'>Google Chrome Frame</a> for IE.
+</p>
+
+<img id='screenshot' width='670px' src="images/screen_small_app.png"/>
+<div>
+    badRabbit © 2012
+</div>

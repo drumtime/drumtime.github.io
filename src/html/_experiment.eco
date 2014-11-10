@@ -1,0 +1,17 @@
+<div>
+  <section id='experiment'>
+    <div class='text'>
+      <h1>Taking Latency Seriously</h1>
+      <p>
+          To ensure minimal latency we put our app to the test. We created a setup that allows DrumTime to 'march' to its own drum, literally!
+      </p>
+      <p>
+          Our test rig consisted of a common electronic drum sensor (a piezo element, if you're curious) attached to a speaker and connected to a drum computer. When the metronome is played in DrumTime, it causes the speaker to vibrate, triggering the sensor and thereby simulating a drum being hit.
+      </p>
+      <p>
+        Since we knew down to the millisecond when each click should be played, we were able measure the time between the click and when the sensor sent a MIDI signal back to the app. We found this delay to be highly consistent at just below 10ms.
+      </p>
+    </div>
+    <div class='image experiment'></div>
+  </section>
+</div>

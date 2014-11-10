@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<%- @render 'head', title: "DrumTime | Helping Drummers Perfect their Timing" %>
+
+<body>
+<!--[if IE]>
+    <%- @render 'ie-fallback' %>
+<![endif]-->
+<![if !IE]>
+
+    <%- @render 'header' %>
+
+    <div class='main-content'>
+        <div id='top-bar'>
+            <div class='content'>
+                <div id='summary'>
+                    <h2>A Fun and Precise Way to Improve Your Timing</h2>
+
+                    <div id='graphic'></div>
+                    <div id='watch' title='see DrumTime in action (video)'>►&nbsp; Watch Video</div>
+                    <p>
+                        DrumTime is a Mac App that works with your electronic drum kit or any MIDI-enabled
+                        percussion device. DrumTime analyzes what you are playing and gives
+                        you visual cues about your timing; in real time.
+                    </p>
+                </div>
+                <div id='screenshot'>
+                    <div id='play_video' class='play' title='see DrumTime in action (video)'></div>
+                </div>
+                <p class='requirements'>Requires OSX 10.6 or higher. Modern graphics card recommended.</p>
+
+            </div>
+            <div id='separator'></div>
+        </div>
+
+
+        <section id='features'>
+            <div>
+            <%- @render 'feature-box', className: 'device-support', title: 'Device Support', description: "DrumTime listens to MIDI input, so it works with any MIDI-enabled instrument. If your device supports MIDI over USB you can plug it in directly; if not, you can use a MIDI to USB interface cable." %>
+
+            <%- @render 'feature-box', className: 'latency', title: 'Very Low Latency', description: "Tapping directly into the advanced audio features of Mac OS, DrumTime was designed with low latency in mind. With a good cable, latency is  below 10ms. Learn more about latency <a href='#experiment'>here</a>." %>
+            </div>
+            <div>
+            <%- @render 'feature-box', className: 'configure', title: 'Highly Configurable', description: "While DrumTime is pre-configured for a standard drum kit, you can easily assign MIDI signals to different tracks, rename and reorder tracks and add as many tracks as you can fit on the screen." %>
+
+            <%- @render 'feature-box', className: 'progress', title: 'Track Your Progress', description: "A real-time score shows you how you are doing. Challenge yourself by reducing the metronome frequency or muting the metronome completely." %>
+            </div>
+            <div>
+            <%- @render 'feature-box', className: 'metronome-sound', title: 'Custom Click Sound', description: "Award-winning sound engineer,  Hugo Verweij, went to great lengths to create the perfect click sound for a metronome. Read more about it <a href='http://www.everydaylistening.com/articles/2013/2/2/drumtime-the-perfect-metronome-sound.html'>here</a>." %>
+
+            <%- @render 'feature-box', className: 'easy', title: 'Easy to Use', description: "DrumTime's clear and focused interface, built-in help and tutorial will get you started in no time." %>
+            </div>
+
+        </section>
+
+
+        <%- @render 'device_support' %>
+
+        <%- @render 'experiment' %>
+
+        <%- @render 'configurable' %>
+    </div>
+
+
+
+    <%- @render 'footer' %>
+    <%- @render 'video' %>
+    <![endif]>
+</body>
+</html>

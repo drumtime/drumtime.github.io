@@ -1,0 +1,83 @@
+header
+  text-align: left
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 10
+  display: block
+  background: transparent
+  box-shadow: 0 1px 2px rgba(#000, 0.6)
+
+  .bg
+    position: absolute
+    background: #fff
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0
+
+  .wrapper
+    @extend .centered-content
+    padding: 20px
+    position: relative
+    height: 105px
+
+  #icon
+    image: "images/icon.png" 64px 64px
+    height: 64px
+    width: 64px
+    display: inline-block
+
+  #links
+    position: absolute
+    right: 16px
+    top: 22px
+    a
+      display: inline-block
+      text-align: center
+
+      &:link, &:visited
+        border-top: 1px dashed #999
+        color: #525252
+        padding: 8px 8px
+        margin: 0 12px
+        text-decoration: none
+
+      &.buy
+        border-top: 1px dashed rgba(187, 95, 129, 1.0)
+        color: rgba(187, 95, 129, 1.0)
+
+        &:not([disabled]):hover
+          background: linear-gradient(top, rgba(187, 95, 129, 0.0), rgba(187, 95, 129, 0.05))
+
+      &.try
+        border-top: 1px dashed rgba(65, 136, 169, 1)
+        color: rgba(65, 136, 169, 1)
+
+        &:not([disabled]):hover
+          background: linear-gradient(top, rgba(65, 136, 169, 0.0), rgba(65, 136, 169, 0.05))
+
+      &:not([disabled]):hover
+        background: linear-gradient(top, rgba(65, 65, 65, 0.0), rgba(65, 65, 65, 0.05))
+
+      &[disabled]
+        cursor: default
+
+      span
+        display: block
+        color: #999
+        font-size: 11px
+        margin-top: 4px
+
+  h1
+    position: relative
+    left: -128px
+    top: -16px
+    display: inline-block
+
+  #separator
+    position: absolute
+    width: 100%
+    bottom: 0

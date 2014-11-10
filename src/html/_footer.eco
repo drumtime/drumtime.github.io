@@ -1,0 +1,25 @@
+<footer>
+    <div class='content'>
+    <div class='col'>
+        <a class='badrabbit' href='http://onebadrabbit.com'></a>
+        <h1>Created by badRabbit</h1>
+        <ul>
+            <li><a href='http://onebadrabbit.com'>badRabbit</a> © 2012</li>
+            <li>Amsterdam, The Netherlands</li>
+        </ul>
+    </div>
+    <div class='col'>
+        <h1>Credits</h1>
+        <ul>
+            <li>Icon and video by <a href='https://www.facebook.com/thetis.videokunst'>Thetis Parmenidou</a></li>
+            <li>Sounds by Hugo Verweij of <a href='http://cleartones.net'>Cleartones</a></li>
+        </ul>
+    </div>
+    <div class='col'>
+        <h1>Special Thanks</h1>
+        <ul>
+            <li>Rob Mekken of <a href='http://www.music-it.nl'>music-it</a></li>
+        </ul>
+    </div>
+    </div>
+</footer>
