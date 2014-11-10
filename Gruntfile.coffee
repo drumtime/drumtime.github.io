@@ -2,31 +2,31 @@ eco    = require 'eco'
 stylus = require 'stylus'
 
 module.exports = (grunt) ->
-  grunt.initConfig 
+  grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
 
     build:
       src: 'src',
-      dest: 'public'
+      dest: '.'
       tmp: 'tmp'
       release: 'public'
-    
+
     stylus:
       compile:
         options:
           define:
-            url: stylus.url({ paths: ['src'], sizeLimit : 1000000 })
+            url: stylus.url({ paths: ['src'], limit : false })
           compress: false
         files:
           '<%=build.dest%>/css/main.css': ['<%=build.src%>/css/main.styl']
       build:
         options:
           define:
-            url: stylus.url({ paths: ['src'], sizeLimit : 1000000 })
+            url: stylus.url({ paths: ['src'], limit : false })
           compress: true
         files:
           '<%=build.release%>/css/main.css': ['<%=build.src%>/css/main.styl']
-          
+
     watch:
       scripts:
         files: ['<%=build.src%>/js/*.coffee', "<%=build.src%>/css/*.styl", "<%=build.src%>/html/*.eco", "<%=build.src%>/images/*.png"]
@@ -57,7 +57,7 @@ module.exports = (grunt) ->
 
     connect:
       server:
-        options: 
+        options:
           base: '<%=build.dest%>'
 
 
