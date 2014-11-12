@@ -17,11 +17,6 @@
     $(document).on('click', function(e) {
       return analytics.trackEvent('click', e.target.nodeName, "#" + e.target.id + "." + e.target.className);
     });
-    $(document).on('click', '.buy', function() {
-      return setTimeout(function() {
-        return window.location = 'macappstore://itunes.apple.com/app/id570388126';
-      }, 50);
-    });
     experimentSection = $('#experiment').parent();
     return $('[href=#experiment]').on('click', function(e) {
       var $html, removeTransforms, top;

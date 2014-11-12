@@ -9,7 +9,7 @@ module.exports = (grunt) ->
       src: 'src',
       dest: '.'
       tmp: 'tmp'
-      release: 'public'
+      release: '.'
 
     stylus:
       compile:

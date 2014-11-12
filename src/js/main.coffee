@@ -14,13 +14,6 @@ $ ->
   $(document).on 'click', (e) ->
     analytics.trackEvent 'click', e.target.nodeName, "##{e.target.id}.#{e.target.className}"
 
-
-  $(document).on 'click', '.buy', ->
-    setTimeout ->
-      window.location = 'macappstore://itunes.apple.com/app/id570388126'
-    , 50
-
-
   experimentSection = $('#experiment').parent()
   $('[href=#experiment]').on 'click', (e) ->
     e.preventDefault()
